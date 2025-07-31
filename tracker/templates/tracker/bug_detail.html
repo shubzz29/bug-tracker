@@ -9,6 +9,10 @@
     <p><strong>Status:</strong> {{ bug.status }}</p>
     <p><strong>Reported At:</strong> {{ bug.created_at }}</p>
 
+    <p>
+        <a href="{% url 'edit_bug' bug.pk %}">✏️ Edit this bug</a>
+    </p>
+
     <a href="{% url 'bug_list' %}">← Back to Bug List</a>
 </body>
 </html>

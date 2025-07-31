@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Bug</title>
+</head>
+<body>
+    <h1>Edit Bug: {{ form.instance.title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <p><a href="{% url 'bug_detail' form.instance.pk %}">Back to Bug Details</a></p>
+</body>
+</html>
