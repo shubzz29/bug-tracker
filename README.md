@@ -15,14 +15,6 @@ A minimal and functional bug tracking system built with Django. This project all
 
 ---
 
-## 📸 Screenshots
-
-| Bug List View | Bug Detail View | Create Bug Form |
-|---------------|------------------|-----------------|
-| ![Bug List](screenshots/bug_list.png) | ![Bug Detail](screenshots/bug_detail.png) | ![Create Bug](screenshots/create_bug.png) |
-
----
-
 ## 🛠️ Tech Stack
 
 - **Python 3.9+**
@@ -33,8 +25,8 @@ A minimal and functional bug tracking system built with Django. This project all
 ---
 1. **Clone the repository**
 
- git clone https://github.com/YOUR_USERNAME/bug-tracker-django.git
- cd bug-tracker-django
+ git clone https://github.com/shubzz29/bug-tracker.git
+ cd bug-tracker
 
 1. **Create virtual environment
 
@@ -43,9 +35,11 @@ A minimal and functional bug tracking system built with Django. This project all
  venv\Scripts\activate     # For Windows
 
 3. **Install dependencies
+
  pip install -r requirements.txt
 
 4. **Run migrations
+
    python manage.py makemigrations
    python manage.py migrate
 
@@ -57,29 +51,9 @@ A minimal and functional bug tracking system built with Django. This project all
 You can create a superuser to access the admin panel:
 
 python manage.py createsuperuser
+
+
 Then go to http://127.0.0.1:8000/admin/ and log in.
-
-📁 Project Structure
-
-bug-tracker/
-├── tracker/
-│   ├── migrations/
-│   ├── templates/
-│   │   └── bug_list.html
-│   │   └── bug_detail.html
-│   │   └── bug_create.html
-│   ├── admin.py
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   └── urls.py
-├── bug_tracker/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── db.sqlite3
-├── manage.py
-└── README.md
 
 📄 License
 This project is open source and available under the MIT License.
