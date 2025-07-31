@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bug Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #efefef;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h1>Bug List</h1>
+    <p><a href="{% url 'bug_create' %}">+ Report New Bug</a></p>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Reporter</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Created</th>
+        </tr>
+        {% for bug in bugs %}
+        <tr>
+            <td><a href="{% url 'bug_detail' bug.pk %}">{{ bug.title }}</a></td>
+            <td>{{ bug.reporter }}</td>
+            <td>{{ bug.status }}</td>
+            <td>{{ bug.priority }}</td>
+            <td>{{ bug.created_at }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5">No bugs found.</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- templates/bug_create.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Bug</title>
+</head>
+<body>
+    <h1>Create a New Bug</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Bug</button>
+    </form>
+    <p><a href="{% url 'bug_list' %}">← Back to Bug List</a></p>
+</body>
+</html>

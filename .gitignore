@@ -1,5 +1,10 @@
-venv/
 __pycache__/
 *.pyc
+*.sqlite3
 db.sqlite3
+.env
+venv/
 *.log
+/static/
+/media/
+/migrations/

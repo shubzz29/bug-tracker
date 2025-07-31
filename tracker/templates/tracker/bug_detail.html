@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ bug.title }} - Details</title>
+</head>
+<body>
+    <h1>{{ bug.title }}</h1>
+    <p><strong>Description:</strong> {{ bug.description }}</p>
+    <p><strong>Status:</strong> {{ bug.status }}</p>
+    <p><strong>Reported At:</strong> {{ bug.created_at }}</p>
+
+    <a href="{% url 'bug_list' %}">← Back to Bug List</a>
+</body>
+</html>
